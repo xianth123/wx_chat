@@ -1,0 +1,268 @@
+.table-container {
+    background: #f7f7f7;
+    padding: 5px;
+}
+
+.table tr td input, .table tr th input {
+    margin: 0 5px 0 0;
+}
+
+.table-content {
+	background: #fff;
+	padding-top: 5px;
+	padding-left:5px;
+	padding-right: 5px;
+    border: 1px solid #dae3e9;
+	margin-left: 30px;
+	margin-right: 5px;
+	border-radius: 4px;
+	display:inline-block;
+	width: 96%;
+}
+
+.table-header {
+	margin-top:5px;
+    margin-bottom: 10px;
+    height: 30px;
+    padding-left:10px;
+    margin-left: 30px;
+}
+
+.table-header select {
+    line-height: 12px;
+}
+
+.table-footer {
+	padding: 5px;
+	margin-top: 15px;
+}
+
+.table-footer .ui-page {
+    float: right;
+}
+
+#J_filter .biz-select {
+	width: 196px;
+	position: relative;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 4px 0;
+	border: 1px solid #ccc;
+	height: 30px;
+	margin: 10px 10px;
+}
+
+#J_filter .biz-select .biz-city {
+	width: 130px;
+	height: 25px;
+	padding: 3px 0;
+	border-radius: 3px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-left: 10px;
+	display: inline-block;
+}
+
+#J_filter .biz-select .biz-province {
+	position: absolute;
+	top: 1px;
+	right: 0px;
+	cursor: pointer;
+	padding: 4px 12px;
+	display: inline-block;
+	color: #333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: #F5F5F5;
+	background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FFF),
+		to(#E6E6E6));
+	background-image: -webkit-linear-gradient(top, #FFF, #E6E6E6);
+	background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #FFF, #E6E6E6);
+	background-repeat: repeat-x;
+	border-left: 1px solid #CCC;
+	border-color: #E6E6E6 #E6E6E6 #BFBFBF;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
+		rgba(0, 0, 0, 0.05);
+}
+
+#J_filter .search-all {
+	position: relative;
+	max-width: 1060px;
+}
+
+#J_filter .btn-group {
+	vertical-align: bottom;
+}
+
+#J_filter .biz-section {
+	display: inline-block;
+	margin-bottom: 10px;
+	height: 34px;
+	padding: 10px;
+}
+
+#J_filter .search-item {
+	font-size: 12px;
+}
+
+#J_filter .caret {
+	margin-left: 7px;
+}
+
+#J_filter input[type="text"] {
+	height: 34px;
+	font-size: 14px;
+	width: 155px;
+	padding: 4px 6px;
+	line-height: 20px;
+	color: #555;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear .2s, box-shadow linear .2s;
+	-moz-transition: border linear .2s, box-shadow linear .2s;
+	-o-transition: border linear .2s, box-shadow linear .2s;
+	transition: border linear .2s, box-shadow linear .2s;
+	position: relative;
+	margin-bottom: 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+
+#J_filter input[type="text"]:focus {
+	z-index: 2;
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(82, 168, 236, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(82, 168, 236, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(82, 168, 236, 0.6);
+}
+
+#J_filter .input-append, #J_filter .input-prepend {
+	font-size: 0;
+	white-space: nowrap;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#J_filter .dropdown-menu>li>a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 20px;
+	color: #333;
+	white-space: nowrap;
+}
+
+#J_filter .dropdown-menu>li>a:hover, #J_filter .dropdown-menu>li>a:focus,
+	#J_filter .dropdown-submenu:hover>a, #J_filter .dropdown-submenu:focus>a
+	{
+	color: #FFF;
+	text-decoration: none;
+	background-color: #0081C2;
+	background-image: -moz-linear-gradient(top, #08c, #0077b3);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08C),
+		to(#0077B3));
+	background-image: -webkit-linear-gradient(top, #08C, #0077B3);
+	background-image: -o-linear-gradient(top, #08c, #0077b3);
+	background-image: linear-gradient(to bottom, #08C, #0077B3);
+	background-repeat: repeat-x;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',
+		endColorstr='#ff0077b3', GradientType=0);
+}
+
+#J_filter .resetFS {
+	font-size: 12px;
+}
+
+#J_filter .resetSel .btn {
+	border-top: none;
+	border-bottom: none;
+}
+
+#J_filter .biz-search {
+	color: #FFF;
+	background-color: #428BCA;
+	border-color: #357EBD;
+	background-image: none;
+	border-radius: 4px;
+}
+
+#J_filter input[type="text"].reset-date {
+	border-radius: 4px;
+	width: 185px;
+}
+
+.ui-page .ui-page-disable {
+    color: #eee;
+    background: #fff;
+    border-bottom-color: #b3b3b3;
+}
+
+.ui-page-num {
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+    border-radius: 3px;
+    background: #fff;
+    float: left;
+}
+
+.ui-page-count {
+    float: left;
+    padding-right: 5px;
+    line-height: 22px;
+}
+
+.ui-page-num a, .ui-page-num span {
+    border-bottom: #b3b3b3 1px solid;
+    display: block;
+    float: left;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 19px;
+    height: 20px;
+    overflow: hidden;
+    padding: 0 10px;
+    color: #6f6f6f;
+    border-right: #b3b3b3 1px solid;
+}
+
+.ui-page-num a:hover, .ui-page-num span {
+    border-bottom: #3bafda 1px solid;
+    color: #fff;
+    background: #3276b1;
+}
+
+.ui-page input, .ui-page .btn {
+    margin: 1px;
+}
+
+.ui-page .ui-page-next {
+    border-right: 0px;
+}
+
+.ui-page input {
+    width: 30px;
+    height: 20px;
+    margin: 1px 5px;
+}
+
+
+/* 表单校验 错误提示样式 */
+.error { font-size: 12px; color: #f00; }

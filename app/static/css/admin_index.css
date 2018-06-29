@@ -1,0 +1,43 @@
+.users .user_role {
+  width: 100px;
+}
+.users user_role > span {
+  border: solid 1px #666666;
+  padding: 1px 5px 0 5px;
+  background: #808080;
+  color: white;
+}
+.users span.role-2 {
+  border: solid 1px #ec971f;
+  padding: 1px 5px 0 5px;
+  background: #f0ad4e;
+  color: white;
+}
+.users span.role-1 {
+  border: solid 1px #449d44;
+  padding: 1px 5px 0 5px;
+  background: #5cb85c;
+  color: white;
+}
+
+.users .deleted {
+  width: 100px;
+}
+.users deleted > span {
+  border: solid 1px #666666;
+  padding: 1px 5px 0 5px;
+  background: #808080;
+  color: white;
+}
+.users span.deleted-0 {
+  border: solid 1px #449d44;
+  padding: 1px 5px 0 5px;
+  background: #5cb85c;
+  color: white;
+}
+.users span.deleted-1 {
+  border: solid 1px #c9302c;
+  padding: 1px 5px 0 5px;
+  background: #d9534f;
+  color: white;
+}

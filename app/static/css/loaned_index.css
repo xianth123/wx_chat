@@ -1,0 +1,30 @@
+.loans .channel {
+    width: 100px
+}
+
+.loans .channel > span {
+  border: solid 1px #666666;
+  padding: 1px 5px 0 5px;
+  background: #808080;
+  color: white;
+}
+.loans .channel span.channel-1 {
+  border: solid 1px #2e6da4;
+  padding: 1px 5px 0 5px;
+  background: #337ab7;
+  color: white;
+}
+
+.loans .channel span.channel-2 {
+  border: solid 1px #449d44;
+  padding: 1px 5px 0 5px;
+  background: #5cb85c;
+  color: white;
+}
+
+.loans .channel span.channel-3 {
+  border: solid 1px #eea237;
+  padding: 1px 5px 0 5px;
+  background: #f0ad4e;
+  color: white;
+}
